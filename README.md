@@ -1,5 +1,5 @@
-Heroku buildpack: FFMpeg
-=======================
+Heroku buildpack: FFMpeg with LameMP3
+=====================================
 
 This is a [Heroku buildpack](http://devcenter.heroku.com/articles/buildpacks) for using [ffmpeg](http://www.ffmpeg.org/) in your project.  
 It doesn't do anything else, so to actually compile your app you should use [heroku-buildpack-multi](https://github.com/ddollar/heroku-buildpack-multi) to combine it with a real buildpack.
@@ -11,10 +11,10 @@ To use this buildpack, you should prepare .buildpacks file that contains this bu
     $ ls
     .buildpacks
     ...
-    
+
     $ cat .buildpacks
-    https://github.com/shunjikonishi/heroku-buildpack-ffmpeg
-    https://github.com/heroku/heroku-buildpack-play
+    https://github.com/consti/heroku-buildpack-ffmpeg-with-lamemp3
+    https://github.com/heroku/heroku-buildpack-ruby.git#v133
 
     $ heroku create --buildpack https://github.com/ddollar/heroku-buildpack-multi
 
@@ -29,4 +29,4 @@ Hacking
 -------
 If you want to use your own ffmpeg binary, fork and rewrite following line.
 
-https://github.com/shunjikonishi/heroku-buildpack-ffmpeg/blob/master/bin/compile#L10
+https://github.com/consti/heroku-buildpack-ffmpeg-with-lamemp3/blob/master/bin/compile#L10
