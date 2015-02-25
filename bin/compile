@@ -15,8 +15,8 @@ cd $BUILD_DIR
 mkdir -p $VENDOR_DIR
 cd $VENDOR_DIR
 curl -L --silent $DOWNLOAD_URL | tar xz
-mv ffmpeg-lame-heroku-1.2/** ./
-rm -r ffmpeg-lame-heroku-1.2
+mv ffmpeg-lame-heroku-1.3/** ./
+rm -r ffmpeg-lame-heroku-1.3
 
 echo "exporting PATH and LIBRARY_PATH" | indent
 PROFILE_PATH="$BUILD_DIR/.profile.d/ffmpeg.sh"
